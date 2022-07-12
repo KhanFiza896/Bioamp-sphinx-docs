@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications &mdash; BioAmp-EXG-Pill Documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="canonical" href="https://upsidedownlabs.github.io/BioAmp-EXG-Pill/#/applications/index.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Software" href="../software/index.html" />
+    <link rel="prev" title="Introduction" href="../introduction/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.1.0-beta
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#electrocardiography">Electrocardiography</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#detecting-heartbeats-with-bioamp-exg-pill-arduino-nano"><strong>Detecting heartbeats with BioAmp EXG Pill &amp; Arduino Nano</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chest-ecg-heartbeat-detection"><strong>1. Chest ECG heartbeat detection</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hand-ekg-heartbeat-detection"><strong>2. Hand EKG heartbeat detection</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references"><strong>References</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electroencephalography">Electroencephalography</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-electroencephalograph-with-bioamp-exg-pill"><strong>Creating Electroencephalograph With BioAmp EXG Pill</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frontal-eeg-recording"><strong>Frontal EEG Recording</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3"><strong>References</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electromyography">Electromyography</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-create-an-electromyograph-with-bioamp-exg-pill"><strong>How to Create an Electromyograph with BioAmp EXG Pill?</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-emg-projects-with-bioamp-exg-pill"><strong>Example EMG Projects with BioAmp EXG Pill</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5"><strong>References</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electrooculography">Electrooculography</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-create-an-electrooculograph-with-bioamp-exg-pill"><strong>How to Create an Electrooculograph With BioAmp EXG Pill?</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recording-horizontal-eye-movement"><strong>Recording Horizontal Eye Movement</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recording-vertical-eye-movement"><strong>Recording Vertical Eye Movement</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eye-blink-detection"><strong>Eye-Blink Detection</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9"><strong>References</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BioAmp-EXG-Pill Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Applications</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/applications/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="applications">
+<h1>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">¶</a></h1>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#open0"><span class="std std-ref">Electrocardiography</span></a></p></li>
+<li><p><a class="reference internal" href="#open1"><span class="std std-ref">Electroencephalography</span></a></p></li>
+<li><p><a class="reference internal" href="#open2"><span class="std std-ref">Electromyography</span></a></p></li>
+<li><p><a class="reference internal" href="#open3"><span class="std std-ref">Electrooculography</span></a></p></li>
+</ol>
+<section id="electrocardiography">
+<span id="open0"></span><h2>Electrocardiography<a class="headerlink" href="#electrocardiography" title="Permalink to this heading">¶</a></h2>
+<p>We are delighted to share that BioAmp EXG Pill is among the top ten <a class="reference external" href="https://hackaday.com/2021/08/31/ten-winners-of-the-hackaday-prize-supportive-tech-challenge/">Winners Of The Hackaday Prize Supportive Tech Challenge</a> .It was all possible because of various <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software">Arduino example sketches</a> and projects that are available for the BioAmp EXG Pill which you can use to create a supportive technology. For example, you can create a mobile heart ailment detection machine, prosthetic hand controller, EOG-based game controller, and many more similar projects. Let’s take a look at how you can use BioAmp EXG Pill to detect heartbeats and potentially create a real-time heart monitor.</p>
+<section id="detecting-heartbeats-with-bioamp-exg-pill-arduino-nano">
+<h3><strong>Detecting heartbeats with BioAmp EXG Pill &amp; Arduino Nano</strong><a class="headerlink" href="#detecting-heartbeats-with-bioamp-exg-pill-arduino-nano" title="Permalink to this heading">¶</a></h3>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electrocardiography-wave.jpg"><img alt="Bioamp-EXG-Pill Electrocardiography-wave diagram" src="../_images/bioamp-exg-pill-electrocardiography-wave.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill Electrocardiography-wave</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To record ECG and detect a heartbeat in that ECG on an Arduino Nano you first need to flash the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/HeartBeatDetection/HeartBeatDetection.ino">Heart Beat Detection Arduino sketch</a>  onto your Nano and then connect the electrodes either on your chest or hands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BioAmp EXG Pill is not a certified medical device and shouldn’t be treated like one.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="chest-ecg-heartbeat-detection">
+<h3><strong>1. Chest ECG heartbeat detection</strong><a class="headerlink" href="#chest-ecg-heartbeat-detection" title="Permalink to this heading">¶</a></h3>
+<p>A very basic method for detecting heartbeats is to place the electrodes near the heart, as shown below. You just Heart have to flash the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/HeartBeatDetection/HeartBeatDetection.ino">Heart beat Detection Arduino sketch</a> to your Nano, do the wiring, and connect the electrodes like this:</p>
+<ol class="arabic simple">
+<li><p>IN- near LEFT shoulder</p></li>
+<li><p>IN+ near RIGHT shoulder</p></li>
+<li><p>REF above Right leg</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electrocardiography-Lead1.jpg"><img alt="Wiring and Electrode placement for chest ECG" src="../_images/bioamp-exg-pill-electrocardiography-Lead1.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Wiring and Electrode placement for chest ECG</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<iframe width="540" height="320" style="display:block; margin:0 auto;" src="https://www.youtube.com/embed/jNXJoB72sxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hand-ekg-heartbeat-detection">
+<h3><strong>2. Hand EKG heartbeat detection</strong><a class="headerlink" href="#hand-ekg-heartbeat-detection" title="Permalink to this heading">¶</a></h3>
+<p>The BioAmp EXG pill is very sensitive to BioPotential signals, so you can even detect heart beats by connecting the electrodes to your hands (much like how an Apple watch records an ECG). To do this, first flash the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/HeartBeatDetection/HeartBeatDetection.ino">Heart Beat Detection Arduino sketch</a> to your nano, and then hook up exactly the same wiring as above, and connect the electrodes like this:</p>
+<ol class="arabic simple">
+<li><p>IN- on LEFT wrist</p></li>
+<li><p>IN+ on RIGHT wrist</p></li>
+<li><p>REF on the back of any hand.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electrocardiography-hand.jpg"><img alt="Bioamp-EXG-Pill Electrocardiography-hand" src="../_images/bioamp-exg-pill-electrocardiography-hand.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill Electrocardiography-hand</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="references">
+<h3><strong>References</strong><a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Join the <a class="reference external" href="https://discord.gg/6aNknuBkfN">Upside Down Labs Discord server</a> for chatting.</p></li>
+<li><p>Subscribe to <a class="reference external" href="https://en.wikipedia.org/wiki/Electrooculography">Electrooculography (EOG)</a> to get notified when we do live.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="electroencephalography">
+<span id="open1"></span><h2>Electroencephalography<a class="headerlink" href="#electroencephalography" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Electroencephalography">Electroencephalography (EEG)</a> is an electrophysiological monitoring method to record the brain’s electrical activity on the scalp. During the procedure, electrodes consisting of small metal discs with thin wires are pasted onto the scalp. The electrodes detect <a class="reference external" href="https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/electroencephalogram-eeg">tiny electrical charges</a> that result from brain-cell activity. Those charges are then amplified to appear on a computer screen. It is typically non-invasive, with the electrodes placed along the scalp. The resulting signal is called an electroencephalogram, an example of which is shown below:</p>
+<blockquote>
+<div><figure class="align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electroencephalography-wave.jpg"><img alt="Bioamp-EXG-Pill Electroencephalography-wave" src="../_images/bioamp-exg-pill-electroencephalography-wave.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill Electroencephalography-wave</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="creating-electroencephalograph-with-bioamp-exg-pill">
+<h3><strong>Creating Electroencephalograph With BioAmp EXG Pill</strong><a class="headerlink" href="#creating-electroencephalograph-with-bioamp-exg-pill" title="Permalink to this heading">¶</a></h3>
+<p>An EEG is performed using an instrument called an electroencephalograph to produce a record called an electroencephalogram. Electrodes are commonly placed on the forehead, as shown in the diagram below, when recording frontal-cortex EEG signals.</p>
+<blockquote>
+<div><figure class="align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electroencephalography.jpg"><img alt="Bioamp-EXG-Pill Electroencephalography" src="../_images/bioamp-exg-pill-electroencephalography.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill Electroencephalography</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To record nice clean EEG signals with BioAmp EXG Pill, all you need is the Analog Serial Out sample Arduino sketch. If you want some more control we also have a <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/FixedSampling/FixedSampling.ino">Fixed Sampling example sketch</a> for recording EEG and other biopotential signals at a specific sampling rate. You can also use the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/EEGFilter/EEGFilter.ino">EEG Filter example sketch</a> for recording EEG at a sampling rate of 256.0 Hz and a frequency of 0.5 - 29.5 Hz. The image below shows the fourth-order Butterworth IIR digital bandpass filter used in the EEG Filter example sketch.</p>
+<blockquote>
+<div><figure class="align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-eegfilter.jpg"><img alt="bioamp-exg-pill EEG filter" src="../_images/bioamp-exg-pill-eegfilter.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill EEG filter</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="frontal-eeg-recording">
+<h3><strong>Frontal EEG Recording</strong><a class="headerlink" href="#frontal-eeg-recording" title="Permalink to this heading">¶</a></h3>
+<p>The video below shows a frontal electroencephalography (EEG) recording for both open- and closed-eye positions. The transition between the signals is also very clearly visible. To get an even better EEG signal, it’s recommended to use a dedicated ADC like the Texas Instruments <a class="reference external" href="https://www.ti.com/product/ADS1115">ADS115 (16-bit)</a> or <a class="reference external" href="https://www.ti.com/product/ADS131M08">ADS131M08 (24-bit)</a>  .On the new BioAmp EXG Pill v1.0, we recommend creating a solder bridge on the back side of the PCB to set the narrow bandpass option.</p>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/617188926?h=809ae189ee" width="540" height="320" style="display:block; margin:0 auto;" frameborder="0" allowfullscreen></iframe><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BioAmp EXG Pill is not a certified medical device and should not be treated like one.</p>
+</div>
+</section>
+<section id="id3">
+<h3><strong>References</strong><a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electroencephalography">https://en.wikipedia.org/wiki/Electroencephalography</a></p></li>
+<li><p><a class="reference external" href="https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/electroencephalogram-eeg">https://www.hopkinsmedicine.org/health/tests-and-therapies/electroencephalogram-eeg</a></p></li>
+<li><p><a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill">https://github.com/upsidedownlabs/BioAmp-EXG-Pill</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="electromyography">
+<span id="open2"></span><h2>Electromyography<a class="headerlink" href="#electromyography" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromyography">Electomyography (EMG)</a> is a technique for evaluating and recording the electrical activity produced by skeletal muscles. EMG is also used as a diagnostic procedure to assess the health of muscles and the nerve cells that control them (motor neurons). EMG results can reveal nerve dysfunction, muscle dysfunction, or problems with nerve-to-muscle signal transmission. The image below shows an EMG wave recorded with BioAmp EXG Pill.</p>
+<blockquote>
+<div><figure class="align-default" id="id17">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-emg-wave.jpg"><img alt="Bioamp-EXG-Pill EMG Wave" src="../_images/bioamp-exg-pill-emg-wave.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">BioAmp-EXG-Pill EMG Wave</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="how-to-create-an-electromyograph-with-bioamp-exg-pill">
+<h3><strong>How to Create an Electromyograph with BioAmp EXG Pill?</strong><a class="headerlink" href="#how-to-create-an-electromyograph-with-bioamp-exg-pill" title="Permalink to this heading">¶</a></h3>
+<p>EMG is performed using an instrument called an electromyograph to produce a record called an electromyogram. Common electrode placement for recording good EMG signal for hand movement is near the ulnar nerve, as shown in the diagram below.</p>
+<blockquote>
+<div><figure class="align-default" id="id18">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-Electromyograph.jpg"><img alt="BioAmp-EXG-Pill-Electromyograph" src="../_images/bioamp-exg-pill-Electromyograph.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill-Electromyograph</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To record nice clean EMG signals with BioAmp EXG Pill, all you need is the Analog Serial Out Arduino sketch. If you want more control we also have a <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/FixedSampling/FixedSampling.ino">Fixed Sampling Arduino sketch</a> that allows you to record EMG and other Biopotential signals at a specific sampling rate. You can also use the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/EMGFilter/EMGFilter.ino">EMG Filter Arduino sketch</a> for recording EMG at a 500 Hz sampling rate and a 74.5 - 149.5 Hz frequency. The image below shows the 4th order bandpass Butterworth IIR digital filter used in the EMG Filter sample sketch:</p>
+<blockquote>
+<div><figure class="align-default" id="id19">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-emgfilter.jpg"><img alt="BioAmp-EXG-Pill-EMG Filter" src="../_images/bioamp-exg-pill-emgfilter.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill EMG Filter</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>For practical use cases, we need a smooth signal, but the raw EMG signal does not come out as a smooth curve, which is why we offer the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/EMGEnvelop/EMGEnvelop.ino">envelope-detection Arduino sketch</a> for BioAmp EXG Pill. The video below shows envelope detection at work:</p>
+  <iframe title="vimeo-player" src="https://player.vimeo.com/video/593798539?h=ef34fc28c3" width="540" height="320" style="display:block; margin:0 auto;" frameborder="0" allowfullscreen></iframe>
+
+|</section>
+<section id="example-emg-projects-with-bioamp-exg-pill">
+<h3><strong>Example EMG Projects with BioAmp EXG Pill</strong><a class="headerlink" href="#example-emg-projects-with-bioamp-exg-pill" title="Permalink to this heading">¶</a></h3>
+<p>BioAmp EXG Pill allows you to do a lot with muscle power. We show two examples below: a servo controller and an LED bar graph. Both demonstrations use code that is derived from the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/EMGEnvelop/EMGEnvelop.ino">envelope-detection Arduino sketch</a> . The image below shows how envelope detection works on the Raw EMG signal.</p>
+<blockquote>
+<div><figure class="align-default" id="id20">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-emgenvelope.jpg"><img alt="Bioamp-EXG-Pill EMG Envelope" src="../_images/bioamp-exg-pill-emgenvelope.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill EMG Envelope</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p>Servo Controller</p></li>
+</ul>
+<p>Controlling a servo motor with BioAmp EXG Pill is pretty easy, as shown in the video below. To create the same project, all you have to do is load the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/ServoControl/ServoControl.ino">servo-control Arduino sketch</a> onto your Arduino-compatible board, and you’re good to go.</p>
+<iframe width="540" height="320" style="display:block; margin:0 auto;" src="https://www.youtube.com/embed/ZePE1umyzFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p>LED Bar Graph</p></li>
+</ul>
+<p>The same envelope-detection concept is used for the LED bar graph project. You can use as many LEDs you want with this project. To make a cool LED bar graph like the one shown in the video below, just edit the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/LEDBarGraph/LEDBarGraph.ino">LED bar graph Arduino sketch</a> , upload it to the Arduino board, then connect the LEDs according to the specified pin numbers.</p>
+<iframe width="540" height="320" style="display:block; margin:0 auto;" src="https://www.youtube.com/embed/MzLAFVXk7_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id5">
+<h3><strong>References</strong><a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.mayoclinic.org/tests-procedures/emg/about/pac-20393913">Mayo Clinic article on EMG</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromyography">Wikipedia Electromyography page</a></p></li>
+<li><p><a class="reference external" href="https://www.instructables.com/Claw-Controller-Using-BIOAMP-EXG-PILL/">PR ROBOTICS Instructables article on Claw Controller Using BioAmp EXG PILL</a></p></li>
+<li><p><a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill">Upside Down Labs - BioAmp EXG Pill Github repository</a></p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="electrooculography">
+<span id="open3"></span><h2>Electrooculography<a class="headerlink" href="#electrooculography" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrooculography">Electrooculography (EOG)</a> is a technique for measuring the corneo-retinal standing potential that exists between the front and the back of the human eye. The resulting signal is called the electrooculogram.</p>
+<figure class="align-default" id="id21">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-eog-demo.jpg"><img alt="Bioamp-EXG-Pill EOG-Demo" src="../_images/bioamp-exg-pill-eog-demo.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill EOG-Demo</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To measure eye movement, pairs of electrodes are typically placed either above and below the eye or to the left and right of the eye. If the eye moves from center position toward one of the two electrodes, this electrode “sees” the positive side of the retina and the opposite electrode “sees” the negative side of the retina. Consequently, a potential difference occurs between the electrodes. Assuming the resting potential is constant, the recorded potential is a measure of the eye’s position.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="how-to-create-an-electrooculograph-with-bioamp-exg-pill">
+<h3><strong>How to Create an Electrooculograph With BioAmp EXG Pill?</strong><a class="headerlink" href="#how-to-create-an-electrooculograph-with-bioamp-exg-pill" title="Permalink to this heading">¶</a></h3>
+<p>EOG is performed using an instrument called an electrooculograph to produce a record called an electrooculogram. Common electrode placement for recording good EOG signal for eye movement (vertical and horizontal) is shown in the diagram below.</p>
+<figure class="align-default" id="id22">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-eog-electrode-placement.jpg"><img alt="Bioamp-EXG-Pill EOG Electrode Placement" src="../_images/bioamp-exg-pill-eog-electrode-placement.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill EOG Electrode Placement</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To record nice clean EOG signals with BioAmp EXG Pill, all you need is the Analog Serial Out Arduino example sketch. If you want some more control we also have a <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/tree/main/software/FixedSampling">Fixed Sampling example sketch</a> for recording EOG and other biopotential signals at a specific sampling rate. You can also use the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/EOGFilter/EOGFilter.ino">EOG Filter example sketch</a> for recording EOG at a sampling rate of 75.0 Hz and a frequency of 0.5 - 19.5 Hz. The image below shows the fourth-order Butterworth IIR digital bandpass filter used in the EOG Filter example sketch.</p>
+<figure class="align-default" id="id23">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-eogfilter.jpg"><img alt="Bioamp-EXG-Pill EOG Filter" src="../_images/bioamp-exg-pill-eogfilter.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">Bioamp-EXG-Pill EOG Filter</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BioAmp EXG Pill is not a certified medical device and should not be treated like one.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="recording-horizontal-eye-movement">
+<h3><strong>Recording Horizontal Eye Movement</strong><a class="headerlink" href="#recording-horizontal-eye-movement" title="Permalink to this heading">¶</a></h3>
+<p>To record horizontal eye movement, place the electrodes near your left and right eyes, just like in the image shown below. Then you just have to flash the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/EOGFilter/EOGFilter.ino">EOG filter program</a> onto your MCU, complete the wiring, and connect the electrodes like this:</p>
+<ol class="arabic simple">
+<li><p><cite>IN-</cite> near right eye</p></li>
+<li><p><cite>IN+</cite> near left eye</p></li>
+<li><p><cite>REF</cite> behind ear</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><figure class="align-default" id="id24">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electrooculography-horizontal.jpg"><img alt="BioAmp EXG Pill Horizontal Eye-Movement" src="../_images/bioamp-exg-pill-electrooculography-horizontal.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">BioAmp EXG Pill Horizontal Eye-Movement</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/605740636?h=68382bb00a" width="540" height="320" style="display:block; margin:0 auto;" frameborder="0" allowfullscreen></iframe></section>
+<section id="recording-vertical-eye-movement">
+<h3><strong>Recording Vertical Eye Movement</strong><a class="headerlink" href="#recording-vertical-eye-movement" title="Permalink to this heading">¶</a></h3>
+<p>To record vertical eye movement, place the electrodes above and below your left or right eye, just like in the image shown below. Then, just like before, flash the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/EOGFilter/EOGFilter.ino">EOG filter program</a> onto your MCU, complete the wiring, and connect the electrodes like this:</p>
+<ol class="arabic simple">
+<li><p><cite>IN-</cite> above eye</p></li>
+<li><p><cite>IN+</cite> below eye</p></li>
+<li><p><cite>REF</cite> behind ear</p></li>
+</ol>
+<figure class="align-default" id="id25">
+<a class="reference internal image-reference" href="../_images/bioamp-exg-pill-electrooculography-vertical.jpg"><img alt="BioAmp EXG Pill Electrooculography-vertical" src="../_images/bioamp-exg-pill-electrooculography-vertical.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-text">BioAmp EXG Pill Electrooculography-vertical</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="eye-blink-detection">
+<h3><strong>Eye-Blink Detection</strong><a class="headerlink" href="#eye-blink-detection" title="Permalink to this heading">¶</a></h3>
+<p>Eye blinks can also be recorded with the same electrode placement. Although we used an Arduino Nano for our testing, you can flash the <a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill/blob/main/software/EyeBlinkDetection/EyeBlinkDetection.ino">Arduino eye-blink detection sketch</a>
+onto any Arduino-compatible board and use it to detect eye blinks. The video below shows a working demo:</p>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/605736032?h=bf6b7bcb55" width="540" height="320" style="display:block; margin:0 auto;" frameborder="0" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id9">
+<h3><strong>References</strong><a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrooculography">https://en.wikipedia.org/wiki/Electrooculography</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ChinmayLonkar/MarioEMG">https://github.com/ChinmayLonkar/MarioEMG</a></p></li>
+<li><p><a class="reference external" href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill">https://github.com/upsidedownlabs/BioAmp-EXG-Pill</a></p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, UpsideDownLabs.
+      <span class="lastupdated">Last updated on Jul 11, 2022.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> BioAmp-EXG-Pill Project</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Document Release Versions</dt>
+        
+          <dd><a href="/">latest</a></dd>
+        
+          <dd><a href="/v1.0/">v1.0</a></dd>
+        
+          <dd><a href="/v0.9/">v0.9</a></dd>
+        
+          <dd><a href="/v0.7/">v0.7</a></dd>
+        
+          <dd><a href="/v0.6/">v0.6</a></dd>
+        
+          <dd><a href="/v0.1/">v0.1</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="Bioamp-exg-pilldocs.pdf">PDF</a></dd>
+      </dl>
+      <dl>
+        <dt>BioAmp-EXG-Pill Links</dt>
+          <dd>
+            <a href="https://upsidedownlabs.github.io/BioAmp-EXG-Pill/#/">Docs</a>
+          </dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
