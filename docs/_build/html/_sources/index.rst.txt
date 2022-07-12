@@ -28,6 +28,7 @@ BioAmp EXG Pill Documentation
    software/index.rst
    hardware/index.rst
 
+   modules 
 
 .. _Licensing:
 
