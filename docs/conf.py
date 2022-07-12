@@ -28,7 +28,10 @@ author = 'UpsideDownLabs'
 # -- General configuration ---------------------------------------------------
 
 extensions = [ 
+    "sphinx.ext.autodoc",
+    "sphinx.ext.githubpages",
     "sphinx_rtd_dark_mode",
+
 ]
 
 # user starts in dark mode
@@ -140,7 +143,7 @@ latex_elements = {
 
 latex_logo = str(DOCS_BASE / "_static" / "images" / "logo-latex.pdf")
 latex_documents = [
-   ("index-tex", "bioamp-Exg-pill.tex", "BioAmp-EXG-Pill Documentation", author, "manual"),
+   ("index-tex", "bioamp-exg-pill.tex", "BioAmp-EXG-Pill Documentation", author, "manual"),
 ]
 
 
