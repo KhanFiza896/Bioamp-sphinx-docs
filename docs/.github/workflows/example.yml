@@ -1,4 +1,4 @@
-- uses: KhanFiza896/Bioamp-sphinx-docs.github.io@master
+- uses: KhanFiza896/Bioamp-sphinx-docs@master
       with:
         docs-folder: "docs/"
         pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
